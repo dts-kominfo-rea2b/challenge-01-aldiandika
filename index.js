@@ -8,10 +8,14 @@ FavColor1.add("Pink");
 FavColor1.add("White");
 FavColor1.add("Purple");
 
+let arrFavColor1 = [...FavColor1];
+
 let FavColor2 = new Set();
 FavColor2.add("Blue");
 FavColor2.add("Black");
 FavColor2.add("Grey");
+
+let arrFavColor2 = [...FavColor2];
 
 let arrSchool1 = [
   {
@@ -54,9 +58,11 @@ let arrSchool2 = [
 let arrRes1 = ["Bento", "Sushi", "Pancake", "Eggy", "Tempura", "Bento", "Eggy", "Padang", "Tteok", "Sushi", "Sushi"];
 let favRes1 = new Set();
 
+
 for(let i=0; i < arrRes1.length; i++){
   favRes1.add(arrRes1[i]);
 }
+let newarrRes1 = [...favRes1];
 
 let arrRes2 = ["Tempura", "Bento", "Sushi", "Pancake", "Padang", "Katsu", "Geprek", "Pancake", "Eggy"];
 let favRes2 = new Set();
@@ -64,26 +70,27 @@ let favRes2 = new Set();
 for(let i=0; i < arrRes2.length; i++){
   favRes2.add(arrRes2[i]);
 }
+let newarrRes2 = [...favRes2];
 
 const firstUser = {
   name: "Monica",
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: FavColor1,
+  favoriteColor: arrFavColor1,
   isHavePet: "Yes",
   education: arrSchool1,
-  favoriteRestaurant: favRes1
+  favoriteRestaurant: newarrRes1
 };
 const secondUser = {
   name: "Wendy",
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: FavColor2,
+  favoriteColor: arrFavColor2,
   isHavePet: "No",
   education: arrSchool2,
-  favoriteRestaurant: favRes2
+  favoriteRestaurant: newarrRes2
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
